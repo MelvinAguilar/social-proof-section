@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        background-color: #f2f2f2 !important;
+        font-family: 'League Spartan', sans-serif;
+    }
+
+    :is(a, button, input, textarea, select, details, summary):focus-visible {
+        outline: white solid 0.15rem;
+        outline-offset: 0.188rem;
+    }
+
+    body {
+        background-image: url('./images/bg-pattern-top-mobile.svg'), url('./images/bg-pattern-bottom-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: 374px 232px, 100vw 56vh;
+        background-position: top left, bottom right;
+    }
+
+    @media screen(md) {
+        body {
+            background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+            background-size: initial;
+        }
+    }
+}
+
+@layer components {
+    .h-dynamic-screen {
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+
+    .figure-flex {
+        @apply md:flex-[1_1_298.5px];
+    }
+
+    .w-figure {
+        @apply max-w-[350px] md:max-w-none lg:max-w-[350px];
+    }
+
+    .self-normal {
+        align-self: normal;
+        max-height: 100%;
+    }
+}
+
+
+@layer utilities {
+    @media (prefers-reduced-motion: reduce) {
+        html:focus-within {
+            scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+            -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+            -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+            -webkit-transition-duration: 0.01ms !important;
+            -o-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}

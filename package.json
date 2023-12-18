@@ -1,0 +1,17 @@
+{
+  "name": "skilled-e-learning-landing-page-development",
+  "version": "1.0.0",
+  "description": "![Design preview for the skilled E learning landing page development coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./output.css --watch --minify"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.9",
+    "tailwindcss": "^3.3.6"
+  }
+}
