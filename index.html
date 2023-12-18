@@ -9,20 +9,27 @@
       content="Social Proof Section Solution for Frontend Mentor"
     />
     <meta name="keywords" content="HTML, CSS, Frontend Mentor" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link href="./output.css" rel="stylesheet" />
+    <title>Social proof section | Frontend Mentor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <title>Social proof section | Frontend Mentor</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./icons/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./manifest.json" />
+    <link href="./output.css" rel="stylesheet" />
   </head>
   <body class="h-dynamic-screen grid place-items-center">
     <main class="w-full max-w-[1174px] p-8 lg:pb-0 lg:pt-[16px]">
@@ -280,5 +287,15 @@
         </ul>
       </section>
     </main>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("./service-worker.js")
+          .then(function () {
+            console.log("Service Worker Registered");
+          });
+      }
+    </script>
   </body>
 </html>
