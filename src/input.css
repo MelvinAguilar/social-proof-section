@@ -1,71 +1,114 @@
+@font-face {
+  font-family: "League Spartan";
+  src:
+    url("./fonts/LeagueSpartan-Medium.woff2") format("woff2"),
+    url("./fonts/LeagueSpartan-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "League Spartan";
+  src:
+    url("./fonts/LeagueSpartan-Bold.woff2") format("woff2"),
+    url("./fonts/LeagueSpartan-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "League Spartan";
+  src:
+    url("./fonts/LeagueSpartan-Regular.woff2") format("woff2"),
+    url("./fonts/LeagueSpartan-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  body {
+    background-color: #f2f2f2 !important;
+    font-family: "League Spartan", sans-serif;
+  }
+
+  :is(a, button, input, textarea, select, details, summary):focus-visible {
+    outline: white solid 0.15rem;
+    outline-offset: 0.188rem;
+  }
+
+  body {
+    background-image: url("./images/bg-pattern-top-mobile.svg"),
+      url("./images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-size:
+      23.375rem 14.5rem,
+      100vw 56vh;
+    background-position:
+      top left,
+      bottom right;
+  }
+
+  @media screen(md) {
     body {
-        background-color: #f2f2f2 !important;
-        font-family: 'League Spartan', sans-serif;
+      background-image: url("./images/bg-pattern-top-desktop.svg"),
+        url("./images/bg-pattern-bottom-desktop.svg");
+      background-size: initial;
     }
-
-    :is(a, button, input, textarea, select, details, summary):focus-visible {
-        outline: white solid 0.15rem;
-        outline-offset: 0.188rem;
-    }
-
-    body {
-        background-image: url('./images/bg-pattern-top-mobile.svg'), url('./images/bg-pattern-bottom-mobile.svg');
-        background-repeat: no-repeat;
-        background-size: 374px 232px, 100vw 56vh;
-        background-position: top left, bottom right;
-    }
-
-    @media screen(md) {
-        body {
-            background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
-            background-size: initial;
-        }
-    }
+  }
 }
 
 @layer components {
-    .h-dynamic-screen {
-        min-height: 100vh;
-        min-height: 100dvh;
-    }
+  .h-dynamic-screen {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
 
-    .figure-flex {
-        @apply md:flex-[1_1_298.5px];
-    }
+  .figure-flex {
+    @apply md:flex-[1_1_18.6563rem];
+  }
 
-    .w-figure {
-        @apply max-w-[350px] md:max-w-none lg:max-w-[350px];
-    }
+  .w-figure {
+    @apply max-w-[21.875rem] md:max-w-none lg:max-w-[21.875rem];
+  }
 
-    .self-normal {
-        align-self: normal;
-        max-height: 100%;
-    }
+  .self-normal {
+    align-self: normal;
+    max-height: 100%;
+  }
+
+  .stars::before {
+    content: url("./images/icon-star.svg") url("./images/icon-star.svg")
+      url("./images/icon-star.svg") url("./images/icon-star.svg")
+      url("./images/icon-star.svg");
+    display: flex;
+    gap: 0.5623rem;
+  }
 }
 
-
 @layer utilities {
-    @media (prefers-reduced-motion: reduce) {
-        html:focus-within {
-            scroll-behavior: auto;
-        }
-
-        *,
-        *::before,
-        *::after {
-            -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-            -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-            -webkit-transition-duration: 0.01ms !important;
-            -o-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
-            scroll-behavior: auto !important;
-        }
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
     }
+
+    *,
+    *::before,
+    *::after {
+      -webkit-animation-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      -webkit-animation-iteration-count: 1 !important;
+      animation-iteration-count: 1 !important;
+      -webkit-transition-duration: 0.01ms !important;
+      -o-transition-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
