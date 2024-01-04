@@ -83,11 +83,15 @@
   }
 
   .stars::before {
-    content: url("./images/icon-star.svg") url("./images/icon-star.svg")
-      url("./images/icon-star.svg") url("./images/icon-star.svg")
-      url("./images/icon-star.svg");
-    display: flex;
-    gap: 0.5623rem;
+    content: "";
+    background-image: url(images/icon-star.svg), url(images/icon-star.svg),
+      url(images/icon-star.svg), url(images/icon-star.svg),
+      url(images/icon-star.svg);
+    width: 7.501rem;
+    height: 1rem;
+    background-size: 1.063rem 1rem;
+    background-repeat: no-repeat;
+    background-position: 0, 1.6253rem, 3.2506rem, 4.8759rem, 6.5012rem;
   }
 }
 

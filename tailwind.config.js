@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        lg: "1020px",
+        xs: "20rem",
+        md: "48rem",
+        lg: "63.75rem",
+        xl: "80rem",
       },
       fontSize: {
         title: "clamp(2.5rem, 2.2143rem + 1.4286vw, 3.5rem)",
@@ -16,7 +19,7 @@ module.exports = {
         quote: "1.375rem",
       },
       maxWidth: {
-        stars: "445px",
+        stars: "27.8125rem",
       },
       colors: {
         purple: "#512051",
